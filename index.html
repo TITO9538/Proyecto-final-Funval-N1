@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./src/scripts/main.js" defer type="module"></script>
+    <title>Proyecto Final</title>
+  </head>
+  <body class="h-screen">
+    <header class="w-full flex flex-col items-center justify-center gap-5">
+      <!-- Logo -->
+      <div class="w-full m-5 px-5">
+        <img src="./src/images/icons/logo-f7862584.svg" alt="Logo" />
+      </div>
+      <!-- Barra de busqueda -->
+      <div
+        class="w-[85%] h-12 rounded-2xl flex m-0 shadow-[0_0_10px_1px_rgba(0,0,0,0.15)] hover:shadow-[0_0_20px_3px_rgba(0,0,0,0.25)] transition-all duration-300">
+        <!-- Location -->
+        <div class="w-[40%] h-full border-r border-r-gray-200 rounded-l-xl bg-white m-0">
+          <input
+            type="text"
+            placeholder="Add location"
+            class="w-full h-full px-3 text-xs font-light text-center text-gray-500 focus:outline-none" />
+        </div>
+        <!-- Guests -->
+        <div class="w-[40%] h-full border-r border-r-gray-200 bg-white m-0">
+          <input
+            type="text"
+            placeholder="Add guests"
+            class="w-full h-full px-3 text-xs font-light text-center text-gray-500 focus:outline-none" />
+        </div>
+        <!-- Serch Button -->
+        <div class="w-[20%] h-full flex items-center justify-center rounded-r-xl m-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="size-4 text-[#eb5757] fill-current">
+            <path
+              fill-rule="evenodd"
+              d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main class="w-full mb-10">
+      <!-- Titulo -->
+      <section class="my-10 mx-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-gray-700">Stays in Finland</h1>
+        <p class="text-sm font-light text-gray-400">12+ stays</p>
+      </section>
+      <!-- Articulos -->
+      <section class="w-full grid grid-cols-1 place-content-center place-items-center gap-4">
+        <article class="w-[90%] flex flex-col items-center justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
+            alt="Hotel Image"
+            class="rounded-2xl" />
+          <div class="w-[90%] flex justify-between items-center mt-2">
+            <!-- superHost, type, beds  -->
+            <div class="flex items-center gap-1 text-xs text-gray-500">
+              <div
+                class="h-6 w-22 border rounded-xl flex items-center justify-center text-gray-600">
+                SUPERHOST
+              </div>
+              <div>type</div>
+              <span>.</span>
+              <div>beds</div>
+            </div>
+            <!-- rating -->
+            <div class="flex items-center gap-1 text-sm text-gray-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="size-4 text-[#eb5757] fill-current">
+                <path
+                  fill-rule="evenodd"
+                  d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="font-light">4.4</span>
+            </div>
+          </div>
+          <!-- Title -->
+          <h3 class="w-[90%] text-sm my-2 font-medium">Stylist apartment in center of the city</h3>
+        </article>
+        <article class="w-[90%] flex flex-col items-center justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
+            alt="Hotel Image"
+            class="rounded-2xl" />
+          <div class="w-[90%] flex justify-between items-center mt-2">
+            <!-- superHost, type, beds  -->
+            <div class="flex items-center gap-1 text-xs text-gray-500">
+              <div
+                class="h-6 w-22 border rounded-xl flex items-center justify-center text-gray-600">
+                SUPERHOST
+              </div>
+              <div>type</div>
+              <span>.</span>
+              <div>beds</div>
+            </div>
+            <!-- rating -->
+            <div class="flex items-center gap-1 text-sm text-gray-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="size-4 text-[#eb5757] fill-current">
+                <path
+                  fill-rule="evenodd"
+                  d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="font-light">4.4</span>
+            </div>
+          </div>
+          <!-- Title -->
+          <h3 class="w-[90%] text-sm my-2 font-medium">Stylist apartment in center of the city</h3>
+        </article>
+        <article class="w-[90%] flex flex-col items-center justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
+            alt="Hotel Image"
+            class="rounded-2xl" />
+          <div class="w-[90%] flex justify-between items-center mt-2">
+            <!-- superHost, type, beds  -->
+            <div class="flex items-center gap-1 text-xs text-gray-500">
+              <div
+                class="h-6 w-22 border rounded-xl flex items-center justify-center text-gray-600">
+                SUPERHOST
+              </div>
+              <div>type</div>
+              <span>.</span>
+              <div>beds</div>
+            </div>
+            <!-- rating -->
+            <div class="flex items-center gap-1 text-sm text-gray-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="size-4 text-[#eb5757] fill-current">
+                <path
+                  fill-rule="evenodd"
+                  d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="font-light">4.4</span>
+            </div>
+          </div>
+          <!-- Title -->
+          <h3 class="w-[90%] text-sm my-2 font-medium">Stylist apartment in center of the city</h3>
+        </article>
+      </section>
+    </main>
+    <footer class="w-full h-20 bg-slate-700 text-slate-400 flex flex-col items-center justify-center">
+        <p class="my-5 text-xs">© 2025 Windbnb™. All Rights Reserved.</p>
+        <div class="w-full flex items-center justify-center">
+            <a href=""></a>
+        </div>
+    </footer>
+  </body>
+</html>

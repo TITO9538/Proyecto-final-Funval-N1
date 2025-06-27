@@ -47,24 +47,30 @@ function renderCards(array, where) {
     array.forEach((hotel) => {
       where.innerHTML += `
       <article class="w-[90%] flex flex-col items-center justify-center overflow-hidden transform transition-transform duration-400 hover:scale-102">
-          <img
-            src="${hotel.photo}"
-            alt="Hotel Image"
-            class="rounded-2xl object-cover w-full h-50 md:h-60" />
+          <div class="rounded-2xl overflow-hidden w-full h-50 md:h-60">
+            <img
+              src="${hotel.photo}"
+              alt="Hotel Image"
+              class="object-cover w-full h-full transform transition-transform duration-800 hover:scale-125 active:scale-170" />
+            </div>
           <div class="w-[90%] flex justify-between items-center mt-2">
             <!-- superHost, type, beds  -->
-            <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-slate-900 dark:bg-slate-500 dark:font-bold xl:text-sm">
+            <div class="flex items-center gap-1 text-xs text-gray-500 xl:text-sm">
               ${
                 hotel.superHost
                   ? `<div
-                class="h-6 w-22 border rounded-xl flex items-center justify-center text-gray-600 xl:w-25">
+                class="h-6 w-22 border rounded-xl flex items-center justify-center text-gray-600 dark:text-slate-900 dark:bg-slate-600 dark:font-bold xl:w-25">
                 SUPERHOST
               </div>`
                   : ""
               }
               <div>${hotel.type}</div>
               <span>.</span>
-              <div>${hotel.beds} beds</div>
+              <div>${
+                hotel.beds == null
+                  ? `unspecified`
+                  : `${hotel.beds > 1 ? `${hotel.beds} beds` : `${hotel.beds} bed`}`
+              }</div>
             </div>
             <!-- rating -->
             <div class="flex items-center gap-1 text-sm text-gray-600">
@@ -72,13 +78,13 @@ function renderCards(array, where) {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
-                class="size-4 text-[#eb5757] fill-current">
+                class="size-4 text-[#eb5757] fill-current hover:animate-spin">
                 <path
                   fill-rule="evenodd"
                   d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
                   clip-rule="evenodd" />
               </svg>
-              <span class="font-light">${hotel.rating}</span>
+              <span class="font-light dark:text-slate-200">${hotel.rating}</span>
             </div>
           </div>
           <!-- Title -->
